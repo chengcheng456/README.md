@@ -38,6 +38,7 @@ The following table defines the core variables used across all regression models
 | **Income Increase** | Optimistic income trajectory treatment | 1 = income increase condition; 0 = income decrease. |
 | **Cheap Salience** | Information regarding low-cost products | 1 = cheap information provided; 0 = expensive. |
 | **Expensive Salience**| Information regarding high-cost products | 1 = cheap information provided; 0 = expensive. |
+| **Income Decrease × Cheap Salience**| Interaction between pessimistic income trajectories and cheap-majority | Product of Income Decrease and Cheap Salience |
 | **Gender** | Participant gender | 1 = Female; 0 = Male. |
 | **Age** | Categorical age classification | 1: 18–25; 2: 26–30; 3: 31–35; 4: 36–40; 5: >40. |
 | **Income** | Monthly income classification | Scale 1 (<2k) to 9 (>25k) as defined in Metadata. |
