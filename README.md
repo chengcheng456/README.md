@@ -1,1 +1,60 @@
 # README.md
+
+# Challenging the Thrift Paradigm: When Decreasing Income Trajectory Drives Expensive Non-Conformity
+
+This repository provides the minimal dataset and Stata replication code for the study on income trajectories and conformity behavior. This documentation ensures compliance with reproducibility standards and provides a roadmap for interpreting the data and scripts.
+
+## 1. Minimal Dataset Overview
+In accordance with the Minimal Dataset Requirement, this package provides:
+- **Primary Data**: Fully de-identified raw data used to generate all key figures, tables, and statistical analyses.
+- **Metadata**: Detailed descriptions of dataset structures, variable definitions, and units of measurement.
+- **Code or Scripts**: Stata Do-files to reproduce all tables and figures.
+- **Supporting Documentation**: This README file guiding data interpretation and script execution.
+
+## 2. Do-file Mapping & Result Verification
+Each script corresponds to a specific analysis or visualization in the manuscript. Please execute them in the following order if necessary:
+
+| Manuscript Item | Stata Do-file | Description |
+| :--- | :--- | :--- |
+| **Table 2** | `Table 2.do` | Tobit Regression - Counter-Conformity Effect in Income-Decrease Group (Script Output: Table 2). |
+| **Table 3** | `Table 3.do` | Logistic Regression - Baseline Conformity by Income Trajectories with Info (Script Output: Table 3). |
+| **Table 4** | `Table 4.do` | Logistic Regression - Role of Cheap Salience on Conformity (Script Output: Table 4). |
+| **Figures A1** | `Figure A1.do` | Robustness check: Cheap product choices under income decline. |
+| **Figure A2** | `Figure A2.do` | Comparison of cheap product choices under income decline: Functional products vs. symbolic products. |
+| **Figure 3** | `Figure3 left.do` & `Figure3 right.do` | Mean Number of Cheap Products by Income Increase vs. Decrease. The error bars represent 95% confidence intervals. |
+| **Figure 4** | `Figure4.do` | Proportion of Cheap Product Choices. |
+| **Figure 5** | `Figure 5.do` | Cheap Product Choices. |
+| **Figure 6** | `Figure6.do` | Social Information in Income Increasing Trajectory. |
+| **Figure 7** | `Figure 7.do` | Heterogeneous Effects: (a) Gender Difference; (b) Income Difference; (c) Age Difference; (d) Residence Difference. |
+| **Heterogeneity** | `4.4. Heterogeneous Effects Across Demographic Groups.do` | Robustness checks across demographic groups. |
+
+## 3. Comprehensive Summary Table of Variables (Metadata)
+The following table defines the core variables used across all regression models:
+
+| Variable | Definition | Coding / Unit of Measurement |
+| :--- | :--- | :--- |
+| **Conformity** | Indicator of social information adherence | 1 = chooses majority option; 0 = otherwise. |
+| **Income Decrease** | Pessimistic income trajectory treatment | 1 = income decrease condition; 0 = income increase. |
+| **Income Increase** | Optimistic income trajectory treatment | 1 = income increase condition; 0 = income decrease. |
+| **Cheap Salience** | Information regarding low-cost products | 1 = cheap information provided; 0 = expensive. |
+| **Expensive Salience**| Information regarding high-cost products | 1 = cheap information provided; 0 = expensive. |
+| **Gender** | Participant gender | 1 = Female; 0 = Male. |
+| **Age** | Categorical age classification | 1: 18–25; 2: 26–30; 3: 31–35; 4: 36–40; 5: >40. |
+| **Income** | Monthly income classification | Scale 1 (<2k) to 9 (>25k) as defined in Metadata. |
+| **Residence** | Residential location type | 1 = Rural; 2 = Town; 3 = City. |
+| **Growth Perception** | Perception of economic growth | 7-point Likert Scale (1: Very Pessimistic to 7: Very Optimistic). |
+| **Education** | Highest educational attainment | 1: Vocational School; 2: College; 3: Bachelor; 4: Master/Ph.D. |
+
+## 4. Execution Instructions and Notes
+To ensure correct replication, please follow these technical requirements from the metadata:
+
+1. **File Paths**: The first line of every Do-file contains a file path command. Users **must manually adjust** this path to match the actual folder location on their local machine before running.
+2. **Specific Script Procedures**:
+   - **Heterogeneous Effects (`4.4. Heterogeneous Effects Across Demographic Groups.do`)**: An error message stating "variable treatment already defined" is expected and does not impact analysis results. It is recommended to manually execute lines 1–158 first, followed by the remaining code.
+   - **Figure 7 Signs**: The raw code calculates `C2-A2` and refers to the dy/dx. However, in the paper, the figure displays `A2-C2`, meaning the signs in the paper are reversed relative to the script output.
+3. **Statistical Settings**:
+   - All models use **Robust Standard Errors**.
+   - Significance levels: `*** p<0.01`, `** p<0.05`, `* p<0.1`.
+
+---
+*For inquiries regarding the dataset or code, please contact the corresponding author as listed in the manuscript.*
