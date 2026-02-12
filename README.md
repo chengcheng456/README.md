@@ -40,10 +40,6 @@ Each script corresponds to a specific analysis or visualization in the manuscrip
 | **Figure 7** | `Figure 7.do` | Heterogeneous Effects: (a) Gender Difference; (b) Income Difference; (c) Age Difference; (d) Residence Difference. |
 | **Heterogeneity** | `4.4. Heterogeneous Effects Across Demographic Groups.do` | Robustness checks across demographic groups. |
 
-### Special Note on Figure 7:
-- **Metric**: Unlike other figures, Figure 7 focuses exclusively on the marginal effects (dy/dx).
-- **Sign Convention**: The script calculates the value as `C2-A2`, whereas the manuscript presents it as `A2-C2`. Consequently, the signs in the paper are the **inverse** of those in the raw script output.
-
 ## 4. Comprehensive Summary Table of Variables (Metadata)
 The following table defines the core variables used across all regression models:
 
