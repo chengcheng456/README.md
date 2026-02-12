@@ -51,7 +51,7 @@ To ensure correct replication, please follow these technical requirements from t
 
 1. **File Paths**: The first line of every Do-file contains a file path command. Users **must manually adjust** this path to match the actual folder location on their local machine before running.
 2. **Specific Script Procedures**:
-   - **Heterogeneous Effects (`4.4. Heterogeneous Effects Across Demographic Groups.do`)**: An error message stating "variable treatment already defined" is expected and does not impact analysis results. It is recommended to manually execute lines 1–158 first, followed by the remaining code.
+   - **Heterogeneous Effects (`4.4. Heterogeneous Effects Across Demographic Groups.do`)**: An message stating "variable treatment already defined" is expected and does not impact analysis results. It is recommended to manually copy and execute.
    - **Figure 7 Signs**: The raw code calculates `C2-A2` and refers to the dy/dx. However, in the paper, the figure displays `A2-C2`, meaning the signs in the paper are reversed relative to the script output.
 3. **Statistical Settings**:
    - All models use **Robust Standard Errors**.
